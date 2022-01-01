@@ -1,7 +1,27 @@
+import axios from 'axios'
+import { useState, useEffect } from 'react'
+
 export default function App() {
+  const [data, setData] = useState([])
+  const URL = 'https://api.openbrewerydb.org/breweries'
+  const fetchData = async () => {
+    const result = await axios(URL)
+    setData(result.data)
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  console.log(data)
+
   return (
-    <div className=' bg-gray-200 h-screen text-yellow-300 hover:text-blue-200 flex items-center justify-center text-4xl font-bold underline'>
-      <div>Hello Itegrify!</div>
+    <div className='text-md bg-gray-300 min-h-screen'>
+      <ol>
+        {data.map((item) => (
+          <li key={item.id}>{item.name}</li>
+        ))}
+      </ol>
     </div>
   )
 }
