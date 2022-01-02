@@ -1,11 +1,22 @@
+import { Link } from 'react-router-dom'
+
 function Header() {
   return (
-    <div className='flex align-center justify-evenly h-16 max-w-7xl  w-[100%] bg-blue-200 sticky top-0 z-10'>
-      <div className='font-serif self-start mt-2 text-3xl text-orange-600 uppercase animate-pulse accent-indigo-300'>
-        Brewery
+    <div className='sticky top-0 z-10 flex justify-between w-screen h-16 px-40 bg-blue-200 shadow-sm align-center'>
+      <div className='mt-2 font-serif text-3xl text-blue-900 uppercase duration-150 cursor-pointer overline accent-indigo-300 underline-offset-8'>
+        <Link to='/'>Brewery</Link>
       </div>
-      <div>Map</div>
-      <div>App Bar</div>
+      <div className='flex justify-between align-baseline'>
+        <div className='p-4 uppercase cursor-pointer'>
+          <Link to='/map'>Map</Link>
+        </div>
+        <div className='p-4 uppercase cursor-pointer'>
+          <Link to='/pagination'>pagination</Link>
+        </div>
+        <div className='p-4 uppercase cursor-pointer'>
+          <Link to='/about'>About</Link>
+        </div>
+      </div>
     </div>
   )
 }

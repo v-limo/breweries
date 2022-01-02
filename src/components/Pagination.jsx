@@ -1,4 +1,4 @@
-function Map() {
+function Pagination() {
   return (
     <div className='flex justify-center h-screen font-sans uppercase align-center first-letter:font-extrabold'>
       Coming soon...
@@ -6,4 +6,4 @@ function Map() {
   )
 }
 
-export default Map
+export default Pagination

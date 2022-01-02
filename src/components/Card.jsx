@@ -1,23 +1,30 @@
 import ButtonComponent from './ButtonComponent'
 import { Link } from 'react-router-dom'
+import LocationOnIcon from '@mui/icons-material/LocationOn'
 
 function Card({ item }) {
-  console.log(item)
-  const { name, brewery_type, city, country ,state, website_url } = item
+  const { name, brewery_type, city, country, state, website_url } = item
   return (
-    <div className='p-5 mt-4 text-clip bg-gray-200 rounded-md shadow-md font-extralight '>
-      <a class='external' rel='noreferrer' href={website_url} target='_blank'>
-        <h1 className='text-center underline font-bold uppercase'>{name}</h1>{' '}
+    <div className='p-10 mt-4 bg-gray-200 rounded-md shadow-md text-clip font-extralight '>
+      <a
+        className='external'
+        rel='noreferrer'
+        href={website_url}
+        target='_blank'
+      >
+        <h1 className='font-bold text-center underline uppercase'>{name}</h1>{' '}
         <br />
       </a>
       <p>Brewery Type: {brewery_type}</p> <br />
       <p>
-        City : {city}, {state}, {country}
+        <LocationOnIcon />
+        <span className='uppercase '>{city}</span>, {state} -
+        {country === 'United States' ? '(USA)' : country}
       </p>
       <br />
-      {/* <Link to='/dashboard'> */}
-      <ButtonComponent label='More Details' color='primary' />
-      {/* </Link> */}
+      <Link to={`/${item.id}`}>
+        <ButtonComponent label='More Details' color='primary' />
+      </Link>
     </div>
   )
 }

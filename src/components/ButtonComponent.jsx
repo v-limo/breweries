@@ -2,11 +2,9 @@ import { Button } from '@mui/material'
 
 function ButtonComponent({ color, label }) {
   return (
-    <div>
-      <Button color={color} variant='contained'>
-        {label}
-      </Button>
-    </div>
+    <Button color={color} variant='contained'>
+      {label}
+    </Button>
   )
 }
 export default ButtonComponent
