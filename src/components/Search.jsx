@@ -1,27 +1,54 @@
 import SearchIcon from '@mui/icons-material/Search'
+import _ from 'lodash'
+import { useEffect, useState } from 'react'
+import Select from 'react-select'
+import { options } from '../assets'
 
-import ButtonComponent from './ButtonComponent'
-function Search() {
-  const Submit = (e) => {
+function Search({ SetQuery, setData, data }) {
+  const [input, setInput] = useState('')
+  const [selected, setSelected] = useState('')
+
+  // useEffect(() => {
+  //   const OrderBy = () => {
+  //     const copyData = [...data]
+  //     if (selected) {
+  //       const newData = _.orderBy(copyData, [selected?.value])
+  //       if (newData) {
+  //         setData(newData)
+  //       }
+  //     }
+  //   }
+  //   OrderBy()
+  // }, [data, setData, selected])
+
+  
+  const handleSubmit = (e) => {
     e.preventDefault()
-    window.alert('')
+    if (input) {
+      SetQuery(input)
+      setInput('')
+      console.log('Query set')
+    } else console.log('No input')
   }
 
-  console.log(input)
-
   return (
-    <div>
-      <div>
-        <SearchIcon />
+    <div className='flex w-screen align-center max-w-7xl'>
+      <input
+        className='px-6 rounded-md shadow-md ring-2'
+        onChange={(e) => setInput(e.target.value)}
+      />
+
+      <div className='px-6 bg-blue-400 rounded-md shadow-md ring-2'>
+        <button onClick={(e) => handleSubmit}>Search</button>
       </div>
-      <input onChange={(e) => setInput(e.target.value)} className=''></input>
-      <div>
-        <ButtonComponent
-          onClick={(e) => Submit}
-          label='Search'
-          color='secondary'
-        />
-      </div>
+
+      <div>Order By : </div>
+
+      <Select
+        defaultValue={selected}
+        onChange={setSelected}
+        options={options}
+      />
     </div>
   )
 }
