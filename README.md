@@ -1,4 +1,4 @@
-# Getting Started with this intergrify pre-assignment
+# Getting Started with this integrify pre-assignment
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
