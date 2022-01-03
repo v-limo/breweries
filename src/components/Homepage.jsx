@@ -11,7 +11,7 @@ export default function Homepage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      if (query) {
+      if (query !== '') {
         const result = await axios(URL_WITH_QUERY)
         return setData(result.data)
       } else {
@@ -22,13 +22,12 @@ export default function Homepage() {
     fetchData()
   }, [query, URL_WITH_QUERY])
 
-
-  console.log(data)
   return (
     <div className='w-screen min-h-screen mx-auto my-4 max-w-7xl'>
-      <Search {...setQuery} {...setData} {...data} />
+      <Search setQuery={setQuery} setData={setData} data={data} />
       <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 '>
         {data && data.map((item) => <Card key={item.id} item={item} />)}
+        {!data && <div> No records meeting the search creteria</div>}
       </div>
     </div>
   )
