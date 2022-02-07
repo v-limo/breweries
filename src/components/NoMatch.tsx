@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import ButtonComponent from './ButtonComponent'
 
-function NoMatch() {
+function NoMatch(): JSX.Element {
   return (
     <div className='flex justify-center h-screen font-sans uppercase align-center first-letter:font-extrabold'>
       404 page not found

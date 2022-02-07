@@ -1,9 +1,9 @@
-function Map() {
+function Pagination(): JSX.Element{
   return (
     <div className='flex justify-center h-screen font-sans uppercase align-center first-letter:font-extrabold'>
-      Map : Coming soon...
+      pagination : Coming soon...
     </div>
   )
 }
 
-export default Map
+export default Pagination

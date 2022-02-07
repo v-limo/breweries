@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 function Footer() {
   const URLS = {
     ld: 'https://www.linkedin.com/in/vincentlimo/ ',
-    gh: 'https://github.com/LimoVincent',
+    gh: 'https://github.com/v-limo',
     mail: 'mailto: limovincenti@gmail.com',
     ig: 'https://www.instagram.com/',
     tw: 'https://twitter.com/Vincent_K_Limo',

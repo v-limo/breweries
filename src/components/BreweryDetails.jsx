@@ -17,8 +17,6 @@ function BreweryDetails() {
     fetchData()
   }, [URL])
 
-  console.log(data)
-
   useEffect(() => {}, [])
 
   const {

@@ -1,11 +1,12 @@
 import Homepage from './components/Homepage'
-import Map from './components/Map'
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import About from './components/About'
 import NoMatch from './components/NoMatch'
 import BreweryDetails from './components/BreweryDetails'
 import Pagination from './components/Pagination'
+import Map from './components/Map'
 
 export default function App() {
   return (
