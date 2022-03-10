@@ -1,45 +1,74 @@
-### 1. Getting Started with this integrify pre-assignment
+# Breweries Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) as a preassignment to intergrify academy. I was accepted 😊
+## Description
 
-[Live Demo](https://affectionate-joliot-640bf8.netlify.app)
+Simple React project to fetch and display  breweries.
 
-## Technologies used
 
-        React and TailwindCss
+## Features
 
-### 2. In Progress......
+- Display all the breweries
+- Sort breweries by name
+- The breweries details page
+- Search for breweries
 
-1.  Finish the page- Pages and pagination. (By 30th Feb.)
-2.  Convert the project into typescript. (By 30th Feb.)
-3.  Convert to use Mui. (By TBA)
-4.  Accesable and responsive layout. (By TBA)
+## Live demo
 
-### 3. Available Scripts
+A [live demo](https://affectionate-joliot-640bf8.netlify.app/) of the app is hosted on Netlify.
 
-In the project directory, you can run:
+## Technology stack
 
-#### 3.1 `npm start`
-npm start
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> ### FrontEnd
+>
+> - React
+> - React Hooks
+> - React router
+> - TailwindCSS
+> - Netlify hosting
+>   <br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
 
-#### 3.2 `npm test`
+Clone this repository to the desired location
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```Shell
+git clone https://github.com/v-limo/integrify_pre_assignment
+```
 
-#### 3.3 `npm run build`
+### Install Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-#### 3.4 `npm run eject`
+### Run
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+# Run frontend (:3000)
+npm run start
+```
+
+## Build & Deploy
+
+```
+# Create  prod build
+cd frontend
+npm run build
+```
+
+### Contributing
+
+Contributions are highly appreciated. In general, I follow the "fork-and-pull" Git workflow.
+
+1. **Fork** this repo
+2. **Clone** the project to your own machine
+3. **Commit** changes to your own branch
+4. **Push** your work back up to your fork
+5. **Submit** a Pull request so that I can review your changes
+
+**NOTE:** Be sure to merge the latest from "upstream" before making a pull request!
+
+### License
+
+MIT license
