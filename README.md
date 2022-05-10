@@ -2,22 +2,20 @@
 
 ## Description
 
-Simple React project to fetch and display  breweries.
-
+A simple React project using the Open Brewery DB API to fetch and display breweries.
 
 ## Features
 
 - Display all the breweries
-- Sort breweries by name
+- Sort breweries by name, type, city, address, and date
 - The breweries details page
 - Search for breweries
 
 ## Live demo
 
-A [live demo](https://affectionate-joliot-640bf8.netlify.app/) of the app is hosted on Netlify.
+A [live demo](https://brewaries.netlify.app/) of the app is hosted on Netlify.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8b40e482-bbd6-4493-bbf7-8cab7a674d1e/deploy-status)](
-    https://app.netlify.com/sites/imo-pre-assignment/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8b40e482-bbd6-4493-bbf7-8cab7a674d1e/deploy-status)](https://app.netlify.com/sites/brewaries/deploys)
 
 ## Technology stack
 
@@ -35,7 +33,7 @@ A [live demo](https://affectionate-joliot-640bf8.netlify.app/) of the app is hos
 Clone this repository to the desired location
 
 ```Shell
-git clone https://github.com/v-limo/integrify_pre_assignment
+git clone https://github.com/v-limo/breweries_app.git
 ```
 
 ### Install Dependencies
@@ -48,7 +46,7 @@ npm install
 ### Run
 
 ```
-# Run frontend (:3000)
+# Run  (:3000)
 npm run start
 ```
 
@@ -56,7 +54,6 @@ npm run start
 
 ```
 # Create  prod build
-cd frontend
 npm run build
 ```
 
