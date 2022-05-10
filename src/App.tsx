@@ -1,12 +1,9 @@
-import Homepage from './components/Homepage'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout'
-import About from './components/About'
-import NoMatch from './components/NoMatch'
-import BreweryDetails from './components/BreweryDetails'
-import Pagination from './components/Pagination'
-import Map from './components/Map'
+import BreweryDetails from './pages/BreweryDetails'
+import Homepage from './pages/Homepage'
+import Layout from './pages/Layout'
+import NoMatch from './pages/NoMatch'
 
 export default function App() {
   return (
@@ -14,9 +11,6 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Homepage />} />
-          <Route path='about' element={<About />} />
-          <Route path='map' element={<Map />} />
-          <Route path='pagination' element={<Pagination />} />
           <Route path=':id' element={<BreweryDetails />} />
           <Route path='*' element={<NoMatch />} />
         </Route>

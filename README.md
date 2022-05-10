@@ -16,6 +16,9 @@ Simple React project to fetch and display  breweries.
 
 A [live demo](https://affectionate-joliot-640bf8.netlify.app/) of the app is hosted on Netlify.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8b40e482-bbd6-4493-bbf7-8cab7a674d1e/deploy-status)](
+    https://app.netlify.com/sites/imo-pre-assignment/deploys)
+
 ## Technology stack
 
 > ### FrontEnd

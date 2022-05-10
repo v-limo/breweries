@@ -1,10 +1,12 @@
 import axios from 'axios'
-import { useState, useEffect } from 'react'
-import Card from './Card'
-import Search from './Search'
+import { useEffect, useState } from 'react'
+
+import Card from '../components/Card'
+import Search from '../components/Search'
+import { BrewaryType } from '../types'
 
 export default function Homepage() {
-  const [data, setData] = useState([])
+  const [data, setData] = useState<BrewaryType[] | []>([])
   const [query, setQuery] = useState('')
   const URL = 'https://api.openbrewerydb.org/breweries'
   const URL_WITH_QUERY = `https://api.openbrewerydb.org/breweries/search?query=${query}`

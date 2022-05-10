@@ -1,12 +1,14 @@
-import { useState, useEffect } from 'react'
-
-import { Link, useParams } from 'react-router-dom'
-import ButtonComponent from './ButtonComponent'
 import axios from 'axios'
+import { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
+
+import ButtonComponent from '../components/ButtonComponent'
+import { BrewaryType } from '../types'
+
 function BreweryDetails() {
   const { id } = useParams()
 
-  const [data, setData] = useState([])
+  const [data, setData] = useState<BrewaryType | null>(null)
   const URL = `https://api.openbrewerydb.org/breweries/${id}`
 
   useEffect(() => {
@@ -17,7 +19,9 @@ function BreweryDetails() {
     fetchData()
   }, [URL])
 
-  useEffect(() => {}, [])
+  if (data === null) {
+    return null
+  }
 
   const {
     name,
@@ -54,9 +58,8 @@ function BreweryDetails() {
         {{ phone } && <div>Phone number : {phone}</div>}
       </div>
 
-      {/* UseHistory is version 5 and i used react router version 6 */}
       <Link to='/'>
-        <ButtonComponent label='Back' color='primary' />
+        <ButtonComponent label='Back'  />
       </Link>
     </div>
   )

@@ -1,3 +1,5 @@
+import { Option } from './types'
+
 export const options = [
   { value: 'name', label: 'Name' },
   { value: 'brewery_type', label: 'Brewery Type' },
@@ -11,6 +13,4 @@ export const options = [
   { value: 'phone', label: 'Phone' },
   { value: 'updated_at', label: 'Updated At' },
   { value: 'created_at', label: 'Created At' },
-]
-
-
+] as Option[]

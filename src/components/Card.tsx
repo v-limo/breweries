@@ -1,15 +1,22 @@
-import ButtonComponent from './ButtonComponent'
 import { Link } from 'react-router-dom'
+
 import LocationOnIcon from '@mui/icons-material/LocationOn'
 
-function Card({ item }) {
+import { BrewaryType } from '../types'
+import ButtonComponent from './ButtonComponent'
+
+type Props = {
+  item: BrewaryType
+}
+
+function Card({ item }: Props) {
   const { name, brewery_type, city, country, state, website_url } = item
   return (
     <div className='p-10 mt-4 bg-gray-200 rounded-md shadow-md text-clip font-extralight '>
       <a
         className='external'
         rel='noreferrer'
-        href={website_url}
+        href={website_url || 'https://www.barrelbrothersbrewing.co'}
         target='_blank'
       >
         <h1 className='font-bold text-center underline uppercase'>{name}</h1>{' '}
@@ -23,7 +30,7 @@ function Card({ item }) {
       </p>
       <br />
       <Link to={`/${item.id}`}>
-        <ButtonComponent label='More Details' color='primary' />
+        <ButtonComponent label='More Details' />
       </Link>
     </div>
   )
