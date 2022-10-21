@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/v-limo/breweries_app/static/css/main.1b47de3d.css",
+    "main.js": "/v-limo/breweries_app/static/js/main.0b24243f.js",
+    "index.html": "/v-limo/breweries_app/index.html",
+    "main.1b47de3d.css.map": "/v-limo/breweries_app/static/css/main.1b47de3d.css.map",
+    "main.0b24243f.js.map": "/v-limo/breweries_app/static/js/main.0b24243f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b47de3d.css",
+    "static/js/main.0b24243f.js"
+  ]
+}
